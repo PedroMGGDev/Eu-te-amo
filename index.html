@@ -1,227 +1,241 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nosso Relacionamento</title>
+    <title>Nossos Momentos</title>
     <style>
-        /* Estilo geral */
         body {
-            font-family: Arial, sans-serif;
             background-color: #121212;
-            color: #fff;
+            color: white;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #d32f2f;
-            color: white;
-            padding: 20px;
+            background-color: #111;
+            padding: 10px 0;
             text-align: center;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        footer {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
-        main {
+        .menu {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu a {
+            color: #ff4c4c;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #ff4c4c;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
         }
 
-        .timeline {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .item-tempo {
-            margin: 20px 0;
-            padding: 10px;
-            background-color: #1c1c1c;
+        .imagem {
+            width: 300px;
             border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
         }
 
-        .item-tempo .data {
-            font-size: 1.2rem;
-            font-weight: bold;
+        .imagem:hover {
+            transform: scale(1.1);
         }
 
-        .item-tempo .descricao {
-            margin: 10px 0;
-        }
-
-        /* Efeito de pulsação nas imagens */
-        .item-tempo img {
+        .imagem img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
-            transition: transform 0.5s ease-in-out;
         }
 
-        .item-tempo img:hover {
-            transform: scale(1.05);
-        }
-
-        .footer {
-            background-color: #1c1c1c;
-            color: white;
-            text-align: center;
-            padding: 10px;
+        .cronometro {
             position: absolute;
-            bottom: 0;
-            width: 100%;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: bold;
+            color: #ff4c4c;
         }
 
-        /* Cronômetro */
-        .tempo-decorrido {
-            font-size: 1.2rem;
-            margin-top: 10px;
+        footer p {
+            font-size: 14px;
+            color: #ff4c4c;
         }
 
-        /* Responsividade para celular */
-        @media (max-width: 600px) {
-            header {
-                padding: 10px;
-            }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .item-tempo {
-                padding: 15px;
-            }
+        .content h1 {
+            color: #ff4c4c;
+            font-size: 2rem;
         }
     </style>
 </head>
 
 <body>
-    <header class="header">
-        <h1>Nossos Momentos</h1>
-        <div id="tempo-decorrido" class="tempo-decorrido"></div>
+
+    <header>
+        <div class="menu">
+            <a href="index.html">Início</a>
+            <a href="#momentos">Momentos</a>
+            <a href="#contato">Contato</a>
+        </div>
+        <div class="content">
+            <h1>Quanto Tempo Se Passou Desde o Nosso Primeiro Encontro?</h1>
+            <div id="tempoInicio"></div>
+        </div>
     </header>
 
-    <main class="main-content">
-        <section class="timeline">
-            <h2>Linha do Tempo</h2>
-            <div class="eventos">
-                <div class="item-tempo">
-                    <span class="data">5 de agosto de 2024</span>
-                    <p class="descricao">Nosso primeiro papo no chat.</p>
-                    <img src="imagens/momento1.png" alt="Primeiro papo">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">6 de agosto de 2024</span>
-                    <p class="descricao">Nos conhecemos pessoalmente.</p>
-                    <img src="imagens/momento2.png" alt="Nos conhecemos pessoalmente">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">10 de agosto de 2024</span>
-                    <p class="descricao">Fomos ao cinema juntos.</p>
-                    <img src="imagens/momento3.png" alt="Cinema juntos">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">15 de agosto de 2024</span>
-                    <p class="descricao">Primeiro beijo.</p>
-                    <img src="imagens/momento4.png" alt="Primeiro beijo">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">20 de agosto de 2024</span>
-                    <p class="descricao">Dia de compras no shopping.</p>
-                    <img src="imagens/momento5.png" alt="Compras no shopping">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">29 de agosto de 2024</span>
-                    <p class="descricao">Nosso encontro no restaurante da Hello Kitty.</p>
-                    <img src="imagens/momento6.png" alt="Restaurante Hello Kitty">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">1 de setembro de 2024</span>
-                    <p class="descricao">Postamos nossa primeira foto no Instagram.</p>
-                    <img src="imagens/momento7.png" alt="Primeira foto no Instagram">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">3 de setembro de 2024</span>
-                    <p class="descricao">Fomos ao restaurante do Bob Esponja.</p>
-                    <img src="imagens/momento8.png" alt="Restaurante Bob Esponja">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">7 de setembro de 2024</span>
-                    <p class="descricao">Assistindo um filme juntos.</p>
-                    <img src="imagens/momento9.png" alt="Assistindo um filme">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">27 de setembro de 2024</span>
-                    <p class="descricao">Fomos ao Outback!</p>
-                    <img src="imagens/momento10.png" alt="Fomos ao Outback">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">27 de setembro de 2024</span>
-                    <p class="descricao">Primeira foto dela sozinha no Instagram.</p>
-                    <img src="imagens/momento11.png" alt="Primeira foto dela sozinha">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">4 de outubro de 2024</span>
-                    <p class="descricao">Primeira foto mostrando seu rosto.</p>
-                    <img src="imagens/momento12.png" alt="Primeira foto mostrando seu rosto">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">5 de outubro de 2024</span>
-                    <p class="descricao">Fomos à Arena ver o Corinthians.</p>
-                    <img src="imagens/momento13.png" alt="Arena Corinthians">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">13 de outubro de 2024</span>
-                    <p class="descricao">Postei a foto do sorriso dela.</p>
-                    <img src="imagens/momento14.png" alt="Foto do sorriso dela">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">14 de outubro de 2024</span>
-                    <p class="descricao">Comemoramos meu aniversário no Outback.</p>
-                    <img src="imagens/momento15.png" alt="Aniversário no Outback">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">21 de outubro de 2024</span>
-                    <p class="descricao">Comemorando o aniversário dela em um restaurante de Castelo.</p>
-                    <img src="imagens/momento16.png" alt="Aniversário dela no restaurante de Castelo">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">5 de novembro de 2024</span>
-                    <p class="descricao">Fomos à Arena novamente.</p>
-                    <img src="imagens/momento17.png" alt="Arena novamente">
-                </div>
-                <div class="item-tempo">
-                    <span class="data">20 de novembro de 2024</span>
-                    <p class="descricao">Conheci meus sogros!</p>
-                    <img src="imagens/momento18.png" alt="Conheci meus sogros">
-                </div>
-            </div>
-        </section>
-    </main>
+    <div class="container" id="momentos">
+        <!-- Imagem de 5 de Outubro -->
+        <div class="imagem">
+            <img src="09568B6C-5536-4B64-929F-6DCB236C0F7A.jpeg" alt="5 de Outubro">
+            <div class="cronometro" id="tempo5Outubro"></div>
+        </div>
 
-    <footer class="footer">
-        <p>&copy; 2024 Nossos Momentos - Todos os direitos reservados.</p>
+        <!-- Imagem de 3 de Setembro do Bob Esponja -->
+        <div class="imagem">
+            <img src="29437222-8162-4DA9-8F59-6D5082DCB613.jpeg" alt="3 de Setembro Bob Esponja">
+            <div class="cronometro" id="tempo3Setembro"></div>
+        </div>
+
+        <!-- Imagem do Outback de 27 de Setembro -->
+        <div class="imagem">
+            <img src="4CBE05BF-BCC6-4233-8F98-31A64B47A24F.jpeg" alt="Outback 27 de Setembro">
+            <div class="cronometro" id="tempo27Setembro"></div>
+        </div>
+
+        <!-- Imagem de 4 de Outubro -->
+        <div class="imagem">
+            <img src="825BEAE3-DACC-4DD6-A349-CE6E69D7A540.jpeg" alt="4 de Outubro">
+            <div class="cronometro" id="tempo4Outubro"></div>
+        </div>
+
+        <!-- Imagem do Aniversário dela -->
+        <div class="imagem">
+            <img src="BA0151A5-1172-433A-BE8C-1D2FCB046CB1.jpeg" alt="Aniversário dela">
+            <div class="cronometro" id="tempoAniversarioDela"></div>
+        </div>
+
+        <!-- Imagem do meu Aniversário -->
+        <div class="imagem">
+            <img src="BFA50CE3-C253-45E0-BF2A-DB3E605BE837.jpeg" alt="Meu Aniversário">
+            <div class="cronometro" id="tempoMeuAniversario"></div>
+        </div>
+
+        <!-- Imagem do Restaurante Hello Kitty -->
+        <div class="imagem">
+            <img src="BFF65964-785F-4AF9-A0EA-702EB32F81B2.jpeg" alt="Restaurante Hello Kitty">
+            <div class="cronometro" id="tempoRestauranteHelloKitty"></div>
+        </div>
+
+        <!-- Imagem do Cinema -->
+        <div class="imagem">
+            <img src="E805115E-E37B-4568-B196-C209A992A97D.jpeg" alt="Cinema">
+            <div class="cronometro" id="tempoCinema"></div>
+        </div>
+
+        <!-- Primeira Foto dela sozinha no dia 27 -->
+        <div class="imagem">
+            <img src="IMG_7605.jpeg" alt="Primeira Foto dela">
+            <div class="cronometro" id="tempoPrimeiraFotoDela"></div>
+        </div>
+
+        <!-- Primeira Foto do Sorriso dela -->
+        <div class="imagem">
+            <img src="IMG_7608.jpeg" alt="Primeira Foto do Sorriso dela">
+            <div class="cronometro" id="tempoPrimeiraFotoSorriso"></div>
+        </div>
+
+        <!-- Foto de 5 de Novembro -->
+        <div class="imagem">
+            <img src="IMG_7613.jpeg" alt="5 de Novembro">
+            <div class="cronometro" id="tempo5Novembro"></div>
+        </div>
+
+        <!-- Foto com o pai dela -->
+        <div class="imagem">
+            <img src="IMG_7614.jpeg" alt="Foto com o pai dela">
+            <div class="cronometro" id="tempoPaiDela"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="content">
+            <p>Todos os direitos reservados - 2024</p>
+        </div>
     </footer>
 
     <script>
-        // Função para calcular o tempo decorrido desde o início da conversa
-        const tempoDecorrido = document.getElementById("tempo-decorrido");
-
-        function calcularTempoDecorrido() {
-            const inicio = new Date("2024-08-05T00:00:00");
+        // Função para calcular o tempo desde a primeira conversa
+        function calcularTempoDesdeConversa() {
+            const dataPrimeiraConversa = new Date('2023-01-01'); // Altere a data para a do seu primeiro encontro
             const agora = new Date();
-            const tempo = agora - inicio;
+            const tempoDecorrido = agora - dataPrimeiraConversa;
 
-            const dias = Math.floor(tempo / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((tempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((tempo % (1000 * 60 * 60)) / (1000 * 60));
+            const dias = Math.floor(tempoDecorrido / (1000 * 60 * 60 * 24));
 
-            tempoDecorrido.innerHTML = `Tempo decorrido: ${dias} dias, ${horas} horas, ${minutos} minutos`;
+            document.getElementById('tempoInicio').innerHTML = `Dias desde a primeira conversa: ${dias} dias`;
         }
+        setInterval(calcularTempoDesdeConversa, 60000); // Atualiza a cada minuto
+        calcularTempoDesdeConversa(); // Chama a função imediatamente
 
+        // Função para calcular o tempo desde cada data
+        function calcularTempoDecorrido() {
+            const datasFotos = {
+                'tempo5Outubro': '2023-10-05',
+                'tempo3Setembro': '2023-09-03',
+                'tempo27Setembro': '2023-09-27',
+                'tempo4Outubro': '2023-10-04',
+                'tempoAniversarioDela': '2023-11-01',
+                'tempoMeuAniversario': '2023-11-10',
+                'tempoRestauranteHelloKitty': '2023-10-15',
+                'tempoCinema': '2023-10-20',
+                'tempoPrimeiraFotoDela': '2023-09-27',
+                'tempoPrimeiraFotoSorriso': '2023-09-27',
+                'tempo5Novembro': '2023-11-05',
+                'tempoPaiDela': '2023-11-03'
+            };
+
+            for (let key in datasFotos) {
+                const dataFoto = new Date(datasFotos[key]);
+                const agora = new Date();
+                const tempoDecorrido = agora - dataFoto;
+
+                const dias = Math.floor(tempoDecorrido / (1000 * 60 * 60 * 24));
+                document.getElementById(key).innerHTML = `${dias} dias`;
+            }
+        }
         setInterval(calcularTempoDecorrido, 60000); // Atualiza a cada minuto
         calcularTempoDecorrido(); // Chama a função imediatamente
     </script>
