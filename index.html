@@ -53,7 +53,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             padding: 20px;
         }
 
@@ -82,6 +82,13 @@
             font-size: 14px;
             font-weight: bold;
             color: #ff4c4c;
+        }
+
+        .descricao {
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 10px;
         }
 
         footer p {
@@ -117,76 +124,88 @@
     </header>
 
     <div class="container" id="momentos">
-        <!-- Imagem de 5 de Outubro -->
-        <div class="imagem">
-            <img src="09568B6C-5536-4B64-929F-6DCB236C0F7A.jpeg" alt="5 de Outubro">
-            <div class="cronometro" id="tempo5Outubro"></div>
-        </div>
-
-        <!-- Imagem de 3 de Setembro do Bob Esponja -->
+        <!-- Imagem do tempo mais longo - 3 de Setembro do Bob Esponja -->
         <div class="imagem">
             <img src="29437222-8162-4DA9-8F59-6D5082DCB613.jpeg" alt="3 de Setembro Bob Esponja">
             <div class="cronometro" id="tempo3Setembro"></div>
+            <div class="descricao">Nos encontramos para ver Bob Esponja no cinema. Foi uma noite divertida!</div>
         </div>
 
-        <!-- Imagem do Outback de 27 de Setembro -->
+        <!-- Imagem do tempo longo - 5 de Outubro -->
+        <div class="imagem">
+            <img src="09568B6C-5536-4B64-929F-6DCB236C0F7A.jpeg" alt="5 de Outubro">
+            <div class="cronometro" id="tempo5Outubro"></div>
+            <div class="descricao">Dia de passeios e boas conversas. A nossa conexão se fortaleceu!</div>
+        </div>
+
+        <!-- Imagem do tempo médio - Outback de 27 de Setembro -->
         <div class="imagem">
             <img src="4CBE05BF-BCC6-4233-8F98-31A64B47A24F.jpeg" alt="Outback 27 de Setembro">
             <div class="cronometro" id="tempo27Setembro"></div>
+            <div class="descricao">Jantar delicioso no Outback, muita risada e amor envolvido.</div>
         </div>
 
-        <!-- Imagem de 4 de Outubro -->
+        <!-- Imagem do tempo médio - 4 de Outubro -->
         <div class="imagem">
             <img src="825BEAE3-DACC-4DD6-A349-CE6E69D7A540.jpeg" alt="4 de Outubro">
             <div class="cronometro" id="tempo4Outubro"></div>
+            <div class="descricao">Nos divertimos muito em um encontro super especial!</div>
         </div>
 
-        <!-- Imagem do Aniversário dela -->
+        <!-- Imagem do tempo médio - Aniversário dela -->
         <div class="imagem">
             <img src="BA0151A5-1172-433A-BE8C-1D2FCB046CB1.jpeg" alt="Aniversário dela">
             <div class="cronometro" id="tempoAniversarioDela"></div>
+            <div class="descricao">O aniversário dela foi um momento inesquecível, cheio de carinho.</div>
         </div>
 
-        <!-- Imagem do meu Aniversário -->
+        <!-- Imagem do tempo curto - Meu Aniversário -->
         <div class="imagem">
             <img src="BFA50CE3-C253-45E0-BF2A-DB3E605BE837.jpeg" alt="Meu Aniversário">
             <div class="cronometro" id="tempoMeuAniversario"></div>
+            <div class="descricao">Meu aniversário foi um dia super especial, compartilhado com ela!</div>
         </div>
 
-        <!-- Imagem do Restaurante Hello Kitty -->
+        <!-- Imagem do tempo curto - Restaurante Hello Kitty -->
         <div class="imagem">
             <img src="BFF65964-785F-4AF9-A0EA-702EB32F81B2.jpeg" alt="Restaurante Hello Kitty">
             <div class="cronometro" id="tempoRestauranteHelloKitty"></div>
+            <div class="descricao">Almoçamos em um restaurante lindo, com decoração da Hello Kitty, tudo perfeito!</div>
         </div>
 
-        <!-- Imagem do Cinema -->
+        <!-- Imagem do tempo curto - Cinema -->
         <div class="imagem">
             <img src="E805115E-E37B-4568-B196-C209A992A97D.jpeg" alt="Cinema">
             <div class="cronometro" id="tempoCinema"></div>
+            <div class="descricao">Mais um cinema juntos, mais uma noite divertida!</div>
         </div>
 
-        <!-- Primeira Foto dela sozinha no dia 27 -->
+        <!-- Imagem do tempo mais curto - Primeira Foto dela sozinha no dia 27 -->
         <div class="imagem">
             <img src="IMG_7605.jpeg" alt="Primeira Foto dela">
             <div class="cronometro" id="tempoPrimeiraFotoDela"></div>
+            <div class="descricao">A primeira foto dela sozinha, uma das primeiras que adorei.</div>
         </div>
 
-        <!-- Primeira Foto do Sorriso dela -->
+        <!-- Imagem do tempo mais curto - Primeira Foto do Sorriso dela -->
         <div class="imagem">
             <img src="IMG_7608.jpeg" alt="Primeira Foto do Sorriso dela">
             <div class="cronometro" id="tempoPrimeiraFotoSorriso"></div>
+            <div class="descricao">O sorriso dela, que marcou meu coração desde a primeira vez que vi.</div>
         </div>
 
-        <!-- Foto de 5 de Novembro -->
+        <!-- Imagem do tempo mais curto - 5 de Novembro -->
         <div class="imagem">
             <img src="IMG_7613.jpeg" alt="5 de Novembro">
             <div class="cronometro" id="tempo5Novembro"></div>
+            <div class="descricao">5 de novembro, um dia cheio de surpresas e alegrias.</div>
         </div>
 
-        <!-- Foto com o pai dela -->
+        <!-- Imagem do tempo mais curto - Foto com o pai dela -->
         <div class="imagem">
             <img src="IMG_7614.jpeg" alt="Foto com o pai dela">
             <div class="cronometro" id="tempoPaiDela"></div>
+            <div class="descricao">A foto dela com o pai, um momento tão importante na vida dela.</div>
         </div>
     </div>
 
@@ -204,40 +223,37 @@
             const tempoDecorrido = agora - dataPrimeiraConversa;
 
             const dias = Math.floor(tempoDecorrido / (1000 * 60 * 60 * 24));
-
-            document.getElementById('tempoInicio').innerHTML = `Dias desde a primeira conversa: ${dias} dias`;
+            document.getElementById("tempoInicio").innerHTML = `Já se passaram ${dias} dias desde o nosso primeiro encontro!`;
         }
-        setInterval(calcularTempoDesdeConversa, 60000); // Atualiza a cada minuto
-        calcularTempoDesdeConversa(); // Chama a função imediatamente
 
-        // Função para calcular o tempo desde cada data
+        // Função para calcular o tempo decorrido desde a data de cada imagem
         function calcularTempoDecorrido() {
-            const datasFotos = {
-                'tempo5Outubro': '2023-10-05',
-                'tempo3Setembro': '2023-09-03',
-                'tempo27Setembro': '2023-09-27',
-                'tempo4Outubro': '2023-10-04',
-                'tempoAniversarioDela': '2023-11-01',
-                'tempoMeuAniversario': '2023-11-10',
-                'tempoRestauranteHelloKitty': '2023-10-15',
-                'tempoCinema': '2023-10-20',
-                'tempoPrimeiraFotoDela': '2023-09-27',
-                'tempoPrimeiraFotoSorriso': '2023-09-27',
-                'tempo5Novembro': '2023-11-05',
-                'tempoPaiDela': '2023-11-03'
+            const datas = {
+                tempo3Setembro: '2023-09-03',
+                tempo5Outubro: '2023-10-05',
+                tempo27Setembro: '2023-09-27',
+                tempo4Outubro: '2023-10-04',
+                tempoAniversarioDela: '2023-10-01',
+                tempoMeuAniversario: '2023-08-28',
+                tempoRestauranteHelloKitty: '2023-11-02',
+                tempoCinema: '2023-11-05',
+                tempoPrimeiraFotoDela: '2023-09-15',
+                tempoPrimeiraFotoSorriso: '2023-09-17',
+                tempo5Novembro: '2023-11-05',
+                tempoPaiDela: '2023-09-18',
             };
 
-            for (let key in datasFotos) {
-                const dataFoto = new Date(datasFotos[key]);
+            for (let key in datas) {
+                const data = new Date(datas[key]);
                 const agora = new Date();
-                const tempoDecorrido = agora - dataFoto;
-
+                const tempoDecorrido = agora - data;
                 const dias = Math.floor(tempoDecorrido / (1000 * 60 * 60 * 24));
                 document.getElementById(key).innerHTML = `${dias} dias`;
             }
         }
         setInterval(calcularTempoDecorrido, 60000); // Atualiza a cada minuto
         calcularTempoDecorrido(); // Chama a função imediatamente
+        calcularTempoDesdeConversa(); // Chama a função imediatamente
     </script>
 </body>
 
