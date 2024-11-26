@@ -20,6 +20,9 @@
             background-color: #d32f2f;
             padding: 10px 20px;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
@@ -28,11 +31,29 @@
             margin: 0;
         }
 
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
         main {
             padding: 20px;
             text-align: center;
         }
 
+        .intro-text {
+            font-size: 1.5em;
+            margin: 20px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Cartões */
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -59,7 +80,7 @@
         .card h2 {
             font-size: 1.8em;
             margin-bottom: 10px;
-            color: #f5a623;
+            color: #d32f2f; /* Cor vermelha */
         }
 
         .card p {
@@ -68,13 +89,7 @@
             line-height: 1.6;
         }
 
-        .intro-text {
-            font-size: 1.5em;
-            margin: 20px 0;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        /* Animação */
+        /* Animações */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -108,8 +123,14 @@
 </head>
 
 <body>
+    <!-- Cabeçalho com o menu -->
     <header>
-        <h1>Nosso Futuro Juntos</h1>
+        <h1>Nosso Futuro</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="encontro.html">Encontros</a>
+            <a href="futuro.html">Futuro</a>
+        </nav>
     </header>
 
     <main>
@@ -160,9 +181,7 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Todos os direitos reservados. Criado com amor.</p>
-    </footer>
+    
 
 </body>
 
