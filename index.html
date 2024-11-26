@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosso Mundo</title>
+    <title>Nosso Lugar</title>
     <style>
         /* Estilos globais */
         * {
@@ -14,99 +14,74 @@
         }
 
         body {
-            background: linear-gradient(to bottom, #f2e6ff, #ffd9e6);
-            color: #444;
-            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
             padding: 0;
             margin: 0;
+            font-size: 1rem;
         }
 
         h1, h2 {
-            text-align: center;
-            color: #6a1b9a;
+            color: #e91e63;
         }
 
-        /* Header */
-        .header {
-            background-color: rgba(0, 0, 0, 0.4);
+        /* Barra de navegação no topo */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #1c1c1c;
+            padding: 10px;
+            border-bottom: 2px solid #e91e63;
+        }
+
+        .navbar a {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #e91e63;
             color: white;
-            padding: 30px 20px;
+        }
+
+        /* Estilo do header */
+        .header {
             text-align: center;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 50px 20px;
+            background-color: #1c1c1c;
+            border-bottom: 2px solid #e91e63;
         }
 
         .titulo {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
+            color: #e91e63;
         }
 
         .subtitulo {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            color: #e0e0e0;
             margin-top: 10px;
-            font-style: italic;
         }
 
-        /* Seção Cronômetro */
-        .cronometro {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 40px 20px;
-            margin: 20px auto;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .cronometro h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .tempo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #e91e63;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        /* Texto romântico */
+        /* Estilo do texto romântico */
         .texto-romantico {
-            margin: 20px auto;
-            width: 80%;
-            max-width: 700px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #2c2c2c;
+            padding: 30px;
             border-radius: 10px;
-            font-size: 1.2rem;
+            color: #e0e0e0;
             text-align: center;
-            color: #444;
+            font-size: 1.2rem;
+            line-height: 1.6;
             font-style: italic;
-        }
-
-        /* Botões de navegação */
-        .buttons {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .btn {
-            background-color: #e91e63;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            margin: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #c2185b;
-            transform: scale(1.05);
         }
 
         /* Animação de coração pulsante */
@@ -133,80 +108,65 @@
         .footer {
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: white;
+            background-color: #1c1c1c;
+            color: #e0e0e0;
             margin-top: 40px;
-            border-radius: 10px;
+            border-top: 2px solid #e91e63;
         }
 
-        .nav-links {
-            list-style-type: none;
-        }
+        /* Estilos para dispositivos móveis */
+        @media screen and (max-width: 600px) {
+            .titulo {
+                font-size: 2.5rem;
+            }
 
-        .nav-links li {
-            display: inline;
-            margin: 0 10px;
-        }
+            .texto-romantico {
+                font-size: 1rem;
+                padding: 20px;
+            }
 
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
+            .navbar a {
+                padding: 10px;
+                font-size: 1rem;
+                margin: 0 5px;
+            }
 
-        .nav-links a:hover {
-            color: #e91e63;
+            .footer {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Barra de Navegação -->
+    <div class="navbar">
+        <a href="momentos.html">Nossos Momentos</a>
+        <a href="fotos.html">Nossas Fotos</a>
+        <a href="historia.html">Nossa História</a>
+    </div>
+
     <header class="header">
-        <h1 class="titulo">Bem-vinda ao nosso mundo, Nicolly!</h1>
-        <p class="subtitulo">Este site é um presente meu para você, um lugar onde podemos celebrar nossa história e nossas memórias.</p>
+        <h1 class="titulo">Aqui é o nosso lugar, Nicolly!</h1>
+        <p class="subtitulo">Um lugar onde celebramos nosso amor e tudo o que vivemos juntos.</p>
     </header>
 
     <main>
         <section class="texto-romantico">
             <p>Minha querida Nicolly,</p>
-            <p>Desde o momento em que vi seu sorriso pela primeira vez, algo em meu coração mudou. Seu sorriso é como uma luz que ilumina meu mundo, e o brilho dos seus olhos me hipnotiza a cada olhar. Você, com seu cabelo encantado, suas curvas perfeitas, e essa delicadeza única que só você tem, é a definição de beleza, tanto por fora quanto por dentro. Cada momento ao seu lado é um presente divino, e cada segundo com você se torna eterno.</p>
-            <p>Eu te amo tanto que nem mesmo o número de dimensões de um espaço quântico com 300 qubits chega perto disso. Esse número é 10<sup>90</sup> vezes maior que o número de átomos no universo, e é exatamente essa a proporção do meu amor por você — imenso e infinito. Você é tudo para mim, e cada dia que passo ao seu lado me faz querer estar ainda mais perto de você, para sempre.</p>
+            <p>Este é o nosso lugar, o lugar onde tudo que sentimos e vivemos pode ser lembrado e celebrado. Eu criei esse espaço pra te lembrar, a cada dia, de como você é incrível. Mais do que uma simples página, isso aqui é uma forma de te mostrar o quanto você é essencial pra mim, de como a sua presença transforma a minha vida de uma maneira única.</p>
+            <p>Cada momento que passamos juntos, cada risada, cada abraço, cada palavra... tudo isso forma a nossa história, nossa conexão que é mais forte que qualquer coisa. Você é tudo o que eu pedi a Deus e, sinceramente, mais do que eu poderia imaginar. Sua beleza, tanto por fora quanto por dentro, me deixa sem palavras. O seu sorriso, o seu jeito de ser, a sua força e a sua doçura... tudo em você me encanta.</p>
+            <p>Você é a razão de muitos dos meus melhores momentos. Estar ao seu lado é um constante lembrete de que o mundo pode ser maravilhoso, porque você faz tudo ficar mais leve e cheio de significado. Eu te admiro profundamente, por tudo o que você é: dedicada, apaixonada, carinhosa, e sempre fiel a si mesma. Não tem nada mais lindo do que ver você sendo você.</p>
+            <p>Esse site é uma pequena forma de expressar o que às vezes as palavras não conseguem. Aqui, quero que você se sinta amada, valorizada e reconhecida por toda a beleza e luz que você traz pro mundo, e principalmente pra minha vida. E quando você entrar nesse espaço, lembre-se sempre que é o nosso cantinho, onde só existe carinho, respeito e amor.</p>
+            <p>Te amo mais do que tudo, Nicolly. E esse cantinho é só um reflexo do que você é pra mim: única, maravilhosa e insubstituível.</p>
+            <p>Eu te amo tanto que nem o número de dimensões de um espaço quântico com 300 qubits chega perto disso e esse número é 10<sup>90</sup> maior que o número de átomos no universo.</p>
             <p class="heart">❤️</p>
         </section>
-
-        <section class="cronometro">
-            <h2>O tempo desde que nos conhecemos</h2>
-            <p id="tempo">Carregando...</p>
-        </section>
-
-        <div class="buttons">
-            <a href="momentos.html" class="btn">Nossos Momentos</a>
-            <a href="fotos.html" class="btn">Nossas Fotos</a>
-            <a href="historia.html" class="btn">Nossa História</a>
-        </div>
     </main>
 
     <footer class="footer">
         <p>Feito com <span class="heart">❤️</span> para Nicolly</p>
     </footer>
 
-    <script>
-        // Função de cronômetro
-        const startDate = new Date('2024-08-05T00:00:00'); // Data do primeiro encontro
-        const tempoElement = document.getElementById('tempo');
-
-        function updateTimer() {
-            const now = new Date();
-            const diff = now - startDate;
-            const seconds = Math.floor(diff / 1000) % 60;
-            const minutes = Math.floor(diff / 60000) % 60;
-            const hours = Math.floor(diff / 3600000) % 24;
-            const days = Math.floor(diff / 86400000);
-
-            tempoElement.innerHTML = `${days} dias ${hours} horas ${minutes} minutos ${seconds} segundos`;
-        }
-
-        setInterval(updateTimer, 1000); // Atualiza o cronômetro a cada segundo
-    </script>
 </body>
 </html>
