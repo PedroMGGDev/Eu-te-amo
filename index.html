@@ -225,10 +225,9 @@
     <script>
         // Função para calcular o tempo desde a primeira conversa
         function calcularTempoDesdeConversa() {
-            const dataPrimeiraConversa = new Date('2023-01-01'); // Altere a data para a do seu primeiro encontro
+            const dataPrimeiraConversa = new Date('2024-01-01'); // Altere a data para a do seu primeiro encontro
             const agora = new Date();
             const tempoDecorrido = agora - dataPrimeiraConversa;
-
             const dias = Math.floor(tempoDecorrido / (1000 * 60 * 60 * 24));
             document.getElementById("tempoInicio").innerHTML = `Já se passaram ${dias} dias desde o nosso primeiro encontro!`;
         }
@@ -236,18 +235,18 @@
         // Função para calcular o tempo decorrido desde a data de cada imagem
         function calcularTempoDecorrido() {
             const datas = {
-                tempo3Setembro: '2023-09-03',
-                tempo5Outubro: '2023-10-05',
-                tempo27Setembro: '2023-09-27',
-                tempo4Outubro: '2023-10-04',
-                tempoAniversarioDela: '2023-10-01',
-                tempoMeuAniversario: '2023-08-28',
-                tempoRestauranteHelloKitty: '2023-11-02',
-                tempoCinema: '2023-11-05',
-                tempoPrimeiraFotoDela: '2023-09-15',
-                tempoPrimeiraFotoSorriso: '2023-09-17',
-                tempo5Novembro: '2023-11-05',
-                tempoPaiDela: '2023-09-18',
+                tempo3Setembro: '2024-09-03',
+                tempo5Outubro: '2024-10-05',
+                tempo27Setembro: '2024-09-27',
+                tempo4Outubro: '2024-10-04',
+                tempoAniversarioDela: '2024-10-01',
+                tempoMeuAniversario: '2024-08-28',
+                tempoRestauranteHelloKitty: '2024-11-02',
+                tempoCinema: '2024-11-05',
+                tempoPrimeiraFotoDela: '2024-09-15',
+                tempoPrimeiraFotoSorriso: '2024-09-17',
+                tempo5Novembro: '2024-11-05',
+                tempoPaiDela: '2024-09-18',
             };
 
             for (let key in datas) {
@@ -258,6 +257,7 @@
                 document.getElementById(key).innerHTML = `${dias} dias`;
             }
         }
+
         setInterval(calcularTempoDecorrido, 60000); // Atualiza a cada minuto
         calcularTempoDecorrido(); // Chama a função imediatamente
         calcularTempoDesdeConversa(); // Chama a função imediatamente
