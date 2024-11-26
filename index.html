@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Mundo</title>
+    <style>
+        /* Estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #f2e6ff, #ffd9e6);
+            color: #444;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #6a1b9a;
+        }
+
+        /* Header */
+        .header {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .titulo {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .subtitulo {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Seção Cronômetro */
+        .cronometro {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .cronometro h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .tempo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e91e63;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        /* Texto romântico */
+        .texto-romantico {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 700px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+            color: #444;
+            font-style: italic;
+        }
+
+        /* Botões de navegação */
+        .buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            background-color: #e91e63;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #c2185b;
+            transform: scale(1.05);
+        }
+
+        /* Animação de coração pulsante */
+        .heart {
+            display: inline-block;
+            color: #e91e63;
+            font-size: 3rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="titulo">Bem-vinda ao nosso mundo, Nicolly!</h1>
+        <p class="subtitulo">Este site é um presente meu para você, um lugar onde podemos celebrar nossa história e nossas memórias.</p>
+    </header>
+
+    <main>
+        <section class="texto-romantico">
+            <p>Minha querida Nicolly,</p>
+            <p>Desde o momento em que vi seu sorriso pela primeira vez, algo em meu coração mudou. Seu sorriso é como uma luz que ilumina meu mundo, e o brilho dos seus olhos me hipnotiza a cada olhar. Você, com seu cabelo encantado, suas curvas perfeitas, e essa delicadeza única que só você tem, é a definição de beleza, tanto por fora quanto por dentro. Cada momento ao seu lado é um presente divino, e cada segundo com você se torna eterno.</p>
+            <p>Eu te amo tanto que nem mesmo o número de dimensões de um espaço quântico com 300 qubits chega perto disso. Esse número é 10<sup>90</sup> vezes maior que o número de átomos no universo, e é exatamente essa a proporção do meu amor por você — imenso e infinito. Você é tudo para mim, e cada dia que passo ao seu lado me faz querer estar ainda mais perto de você, para sempre.</p>
+            <p class="heart">❤️</p>
+        </section>
+
+        <section class="cronometro">
+            <h2>O tempo desde que nos conhecemos</h2>
+            <p id="tempo">Carregando...</p>
+        </section>
+
+        <div class="buttons">
+            <a href="momentos.html" class="btn">Nossos Momentos</a>
+            <a href="fotos.html" class="btn">Nossas Fotos</a>
+            <a href="historia.html" class="btn">Nossa História</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Feito com <span class="heart">❤️</span> para Nicolly</p>
+    </footer>
+
+    <script>
+        // Função de cronômetro
+        const startDate = new Date('2024-08-05T00:00:00'); // Data do primeiro encontro
+        const tempoElement = document.getElementById('tempo');
+
+        function updateTimer() {
+            const now = new Date();
+            const diff = now - startDate;
+            const seconds = Math.floor(diff / 1000) % 60;
+            const minutes = Math.floor(diff / 60000) % 60;
+            const hours = Math.floor(diff / 3600000) % 24;
+            const days = Math.floor(diff / 86400000);
+
+            tempoElement.innerHTML = `${days} dias ${hours} horas ${minutes} minutos ${seconds} segundos`;
+        }
+
+        setInterval(updateTimer, 1000); // Atualiza o cronômetro a cada segundo
+    </script>
+</body>
+</html>
