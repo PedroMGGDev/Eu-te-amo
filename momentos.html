@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nosso Relacionamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Nossos Momentos</h1>
+        <div id="tempo-decorrido" class="tempo-decorrido"></div>
+    </header>
+
+    <main class="main-content">
+        <section class="timeline">
+            <h2>Linha do Tempo</h2>
+            <div class="eventos">
+                <div class="item-tempo">
+                    <span class="data">5 de agosto de 2024</span>
+                    <p class="descricao">Nosso primeiro papo no chat.</p>
+                    <img src="imagens/momento1.png" alt="Primeiro papo">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">6 de agosto de 2024</span>
+                    <p class="descricao">Nos conhecemos pessoalmente.</p>
+                    <img src="imagens/momento2.png" alt="Nos conhecemos pessoalmente">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">10 de agosto de 2024</span>
+                    <p class="descricao">Fomos ao cinema juntos.</p>
+                    <img src="imagens/momento3.png" alt="Cinema juntos">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">15 de agosto de 2024</span>
+                    <p class="descricao">Primeiro beijo.</p>
+                    <img src="imagens/momento4.png" alt="Primeiro beijo">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">20 de agosto de 2024</span>
+                    <p class="descricao">Dia de compras no shopping.</p>
+                    <img src="imagens/momento5.png" alt="Compras no shopping">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">29 de agosto de 2024</span>
+                    <p class="descricao">Nosso encontro no restaurante da Hello Kitty.</p>
+                    <img src="imagens/momento6.png" alt="Restaurante Hello Kitty">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">1 de setembro de 2024</span>
+                    <p class="descricao">Postamos nossa primeira foto no Instagram.</p>
+                    <img src="imagens/momento7.png" alt="Primeira foto no Instagram">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">3 de setembro de 2024</span>
+                    <p class="descricao">Fomos ao restaurante do Bob Esponja.</p>
+                    <img src="imagens/momento8.png" alt="Restaurante Bob Esponja">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">7 de setembro de 2024</span>
+                    <p class="descricao">Assistindo um filme juntos.</p>
+                    <img src="imagens/momento9.png" alt="Assistindo um filme">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">27 de setembro de 2024</span>
+                    <p class="descricao">Fomos ao Outback!</p>
+                    <img src="imagens/momento10.png" alt="Fomos ao Outback">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">27 de setembro de 2024</span>
+                    <p class="descricao">Primeira foto dela sozinha no Instagram.</p>
+                    <img src="imagens/momento11.png" alt="Primeira foto dela sozinha">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">4 de outubro de 2024</span>
+                    <p class="descricao">Primeira foto mostrando seu rosto.</p>
+                    <img src="imagens/momento12.png" alt="Primeira foto mostrando seu rosto">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">5 de outubro de 2024</span>
+                    <p class="descricao">Fomos à Arena ver o Corinthians.</p>
+                    <img src="imagens/momento13.png" alt="Arena Corinthians">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">13 de outubro de 2024</span>
+                    <p class="descricao">Postei a foto do sorriso dela.</p>
+                    <img src="imagens/momento14.png" alt="Foto do sorriso dela">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">14 de outubro de 2024</span>
+                    <p class="descricao">Comemoramos meu aniversário no Outback.</p>
+                    <img src="imagens/momento15.png" alt="Aniversário no Outback">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">21 de outubro de 2024</span>
+                    <p class="descricao">Comemorando o aniversário dela em um restaurante de Castelo.</p>
+                    <img src="imagens/momento16.png" alt="Aniversário dela no restaurante de Castelo">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">5 de novembro de 2024</span>
+                    <p class="descricao">Fomos à Arena novamente.</p>
+                    <img src="imagens/momento17.png" alt="Arena novamente">
+                </div>
+                <div class="item-tempo">
+                    <span class="data">20 de novembro de 2024</span>
+                    <p class="descricao">Conheci meus sogros!</p>
+                    <img src="imagens/momento18.png" alt="Conheci meus sogros">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Nossos Momentos - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para calcular o tempo decorrido desde o início da conversa
+        const tempoDecorrido = document.getElementById("tempo-decorrido");
+
+        function calcularTempoDecorrido() {
+            const inicio = new Date("2024-08-05T00:00:00");
+            const agora = new Date();
+            const tempo = agora - inicio;
+
+            const dias = Math.floor(tempo / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((tempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((tempo % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((tempo % (1000 * 60)) / 1000);
+
+            tempoDecorrido.innerHTML = `Já se passaram ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos desde nosso primeiro papo.`;
+        }
+
+        setInterval(calcularTempoDecorrido, 1000);
+    </script>
+</body>
+
+</html>
